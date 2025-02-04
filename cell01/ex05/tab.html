@@ -1,40 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two-Box Table</title>
+    <title>EX06</title>
+
     <style>
+        body {
+            margin: 0;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            border: 1px solid black;
         }
+
         td {
             width: 50%;
-            height: 80px;
-            text-align: left;
-            padding: 10px;
-            font-size: 18px;
-            border: 1px solid black;
+            height: 100px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
             color: white;
         }
-        .first-cell {
-            background-color: #702963; /* Purple */
+
+        .box1 {
+            background-color: red;
         }
-        .second-cell {
-            background-color: #800020; /* Red Burgundy */
+
+        .box2 {
+            background-color: blue;
+        }
+
+        @media screen and (max-width: 600px) {
+            table {
+                width: 90%;
+            }
+
+            td {
+                display: block;
+                width: 100%;
+            }
         }
     </style>
 </head>
+
 <body>
-    
-    <table>
+
+    <table border="1">
         <tr>
-            <td class="first-cell">Purple</td>
-            <td class="second-cell">Red</td>
+            <td class="box1">Box 1 : Red</td>
+            <td class="box2">Box 2 : Blue</td>
         </tr>
     </table>
 
 </body>
+
 </html>
