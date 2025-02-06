@@ -28,6 +28,7 @@
             font-size: 16px;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -44,50 +45,44 @@
         </select>
         <input type="number" id="number2" min="0" placeholder="Enter number">
         <br>
-        <button onclick="calc()">Try me!</button>
+        <button id="calcBtn">Try me!</button>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        function calc() {
-            let number1 = document.getElementById("number1").value;
-            let operator = document.getElementById("operator").value;
-            let number2 = document.getElementById("number2").value;
+        $(document).ready(function () {
+            $("#calcBtn").click(function () {
+                let num1 = parseInt($("#number1").val());
+                let operator = $("#operator").val();
+                let num2 = parseInt($("#number2").val());
 
-            let num1 = parseInt(number1);
-            let num2 = parseInt(number2);
+                if (num1 < 0 || num2 < 0) {
+                    alert("Error :(");
+                    return;
+                }
 
-            if (num1 < 0 || num2 < 0) {
-                alert("Error :(");
-                return;
-            }
+                if ((operator === "/" || operator === "%") && num2 === 0) {
+                    alert("It's over 9000!");
+                    console.log("It's over 9000!");
+                    return;
+                }
 
-            if ((operator === "/" || operator === "%") && num2 === 0) {
-                alert("It's over 9000!");
-                console.log("It's over 9000!");
-                return;
-            }
+                let result;
+                switch (operator) {
+                    case "+": result = num1 + num2; break;
+                    case "-": result = num1 - num2; break;
+                    case "*": result = num1 * num2; break;
+                    case "/": result = num1 / num2; break;
+                    case "%": result = num1 % num2; break;
+                }
 
-            let result;
-            if (operator === "+") {
-                result = num1 + num2;
-            } else if (operator === "-") {
-                result = num1 - num2;
-            } else if (operator === "*") {
-                result = num1 * num2;
-            } else if (operator === "/") {
-                result = num1 / num2;
-            } else if (operator === "%") {
-                result = num1 % num2;
-            }
+                alert("Result: " + result);
+                console.log("Result:", result);
+            });
 
-            alert("Result: " + result);
-            console.log("Result:", result);
-        }
-
-        setInterval(() => {
-            alert("Please, use me...");
-        }, 30000);
+            setInterval(() => {
+                alert("Please, use me...");
+            }, 30000);
+        });
     </script>
 
 </body>
