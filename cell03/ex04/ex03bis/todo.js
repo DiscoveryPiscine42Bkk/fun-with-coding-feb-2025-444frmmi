@@ -26,16 +26,18 @@ function removeTask(index) {
 }
 
 function renderTasks() {
-    let ftList = document.getElementById("ft_list");
-    ftList.innerHTML = "";
+    let ftList = $("#ft_list");
+    ftList.empty(); // ใช้ jQuery แทน innerHTML = ""
+    
     let tasks = getTasks();
     tasks.forEach((task, index) => {
-        let taskDiv = document.createElement("div");
-        taskDiv.className = "task";
-        taskDiv.textContent = task;
-        taskDiv.onclick = () => removeTask(index);
-        ftList.appendChild(taskDiv);
+        let taskDiv = $("<div></div>").addClass("task").text(task);
+        taskDiv.click(() => removeTask(index)); // ใช้ jQuery แทน onclick
+        ftList.append(taskDiv);
     });
 }
 
-document.addEventListener("DOMContentLoaded", renderTasks);
+$(document).ready(function() {
+    $("#newTaskBtn").click(addTask); // ใช้ jQuery แทน onclick
+    renderTasks();
+});
