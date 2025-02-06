@@ -27,17 +27,17 @@ function removeTask(index) {
 
 function renderTasks() {
     let ftList = $("#ft_list");
-    ftList.empty(); // ใช้ jQuery แทน innerHTML = ""
+    ftList.empty(); 
     
     let tasks = getTasks();
     tasks.forEach((task, index) => {
         let taskDiv = $("<div></div>").addClass("task").text(task);
-        taskDiv.click(() => removeTask(index)); // ใช้ jQuery แทน onclick
+        taskDiv.click(() => removeTask(index)); 
         ftList.append(taskDiv);
     });
 }
 
 $(document).ready(function() {
-    $("#newTaskBtn").click(addTask); // ใช้ jQuery แทน onclick
+    $("#newTaskBtn").click(addTask); 
     renderTasks();
 });
