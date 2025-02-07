@@ -9,7 +9,7 @@ body{
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(to bottom, #ffb6db, #d1fffa);
+    background: linear-gradient(to bottom, #ffc6e3, #ffc6e3);
     overflow: auto;
 }
 nav{
