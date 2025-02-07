@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="rp.css">
+    <title>nruangpi's Portfolio</title>
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .image img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo fade-in">
+                <span>Nattarat Ruangpiyasaree</span>
+            </div>
+            <div class="links">
+                <div class="link fade-in"><a href="#">Home</a></div>
+                <div class="link fade-in" style="animation-delay: 0.2s;"><a href="#">Contact</a></div>
+                <div class="link fade-in" style="animation-delay: 0.4s;"><a href="#">Skills</a></div>
+                <div class="link fade-in" style="animation-delay: 0.6s;"><a href="#">Experience</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">Contact</a>
+                <a href="#">Skills</a>
+                <a href="#">Experience</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    
+    
+    
+    <section>
+        <div class="main-container">
+            <div class="image fade-in" style="animation-duration: 3s;">
+                <img src="https://i.pinimg.com/736x/53/3d/4a/533d4a4a672c9d014b544f18f4416ce2.jpg" alt="">
+            </div>
+            <div class="content fade-in">
+                <h1>Hey I'm Nattarat (20)</h1>
+                <p>Passionate IoT and Information system Engineering student with a strong foundation in embedded systems, wireless communication, and cloud computing. Skilled in developing smart solutions through sensor integration and data analytics. Enthusiastic about the future of IoT and its applications in smart cities, automation, and AI-driven technologies.</p>
+                <div class="social-links">
+                    <a href="https://github.com/DiscoveryPiscine42Bkk/fun-with-coding-feb-2025-444frmmi" target="_blank" rel="noopener noreferrer" class="fade-in"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/ninattha_/" target="_blank" rel="noopener noreferrer" class="fade-in" style="animation-delay: 0.2s;"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="fade-in" style="animation-delay: 0.4s;"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" class="fade-in" style="animation-delay: 0.2s;"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills-experience">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container fade-in">
+            <div class="skill-box"><p>Embedded Systems</p></div>
+            <div class="skill-box"><p>Wireless Communication</p></div>
+            <div class="skill-box"><p>UX/UI</p></div>
+            <div class="skill-box"><p>Data Analytics</p></div>
+        </div>
+    
+        <h2 class="section-title">Experiences</h2>
+        <div class="experience-container fade-in">
+            <div class="experience-box"><img src="https://images.freeimages.com/365/images/previews/7eb/beautiful-certificate-template-4-vector-7349.jpg" alt="Experience 1"></div>
+            <div class="experience-box"><img src="https://images.freeimages.com/365/images/previews/7eb/beautiful-certificate-template-4-vector-7349.jpg" alt="Experience 2"></div>
+            <div class="experience-box"><img src="https://images.freeimages.com/365/images/previews/7eb/beautiful-certificate-template-4-vector-7349.jpg" alt="Experience 3"></div>
+        </div>
+    </section>
+    
+    
+</body>
+</html>
